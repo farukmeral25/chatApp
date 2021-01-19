@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "80102375392",
+    "project_id": "uberclone-12083",
+    "storage_bucket": "uberclone-12083.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:80102375392:android:23dcc5686121ba55983585",
+        "android_client_info": {
+          "package_name": "com.example.flutter_chat_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "80102375392-oi8qbhbhh1ga4vh6ov2b2cc353k7pe6g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.flutter_chat_app",
+            "certificate_hash": "7a918aab14e5ec223ca8953c98e279895c2dd117"
+          }
+        },
+        {
+          "client_id": "80102375392-uqmj5pvdp0408s5tdujhjkgualfg0cdc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCq8TdufXGf-QyvkYd0Qw1hbkwxZUnJLZc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "80102375392-uqmj5pvdp0408s5tdujhjkgualfg0cdc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
