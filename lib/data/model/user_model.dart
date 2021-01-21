@@ -11,14 +11,14 @@ class UserModel extends UserEntity {
     String status,
     String profileUrl,
   }) : super(
-          name,
-          email,
-          phoneNumber,
-          isOnline,
-          uid,
-          status,
-          profileUrl,
-        );
+    name: name,
+    email: email,
+    phoneNumber: phoneNumber,
+    isOnline: isOnline,
+    uid: uid,
+    status: status,
+    profileUrl: profileUrl,
+  );
 
   factory UserModel.fromSnapshot(DocumentSnapshot snapshot) {
     return UserModel(

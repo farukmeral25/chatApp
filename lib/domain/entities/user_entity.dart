@@ -15,7 +15,7 @@ class UserEntity extends Equatable {
     this.phoneNumber,
     this.isOnline,
     this.uid,
-    this.status,
+    this.status = "Hey there! I am using AntChatApp.",
     this.profileUrl,
   });
 
