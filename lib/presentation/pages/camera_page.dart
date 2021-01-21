@@ -97,7 +97,9 @@ class _CameraPageState extends State<CameraPage> {
                 color: Colors.white,
               ),
             ),
-            SizedBox(width: 50,),
+            SizedBox(
+              width: 50,
+            ),
             Container(
               height: 80,
               width: 80,

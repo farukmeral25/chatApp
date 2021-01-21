@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_app/presentation/screens/splash_screen.dart';
 import 'package:flutter_chat_app/presentation/widgets/theme/style.dart';
+import 'injection_container.dart' as di;
+
 void main() {
   runApp(MyApp());
 }
@@ -19,4 +21,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
