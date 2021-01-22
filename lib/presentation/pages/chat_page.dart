@@ -12,21 +12,53 @@ class _ChatPageState extends State<ChatPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Expanded(
-            child: ListView.builder(
-              itemCount: 10,
-              itemBuilder: (_, index) {
-                return SingleItemChatUserPage();
-              },
+          Container(
+            height: 150,
+            width: 150,
+            decoration: BoxDecoration(
+              color: greenColor.withOpacity(.5),
+              borderRadius: BorderRadius.all(
+                Radius.circular(100),
+              ),
+            ),
+            child: Icon(
+              Icons.message,
+              color: Colors.white.withOpacity(.6),
+              size: 40,
             ),
           ),
+          Align(
+            child: Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Text(
+                "Start chat with your friends and family,\n on AntChat",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Colors.black.withOpacity(.4),
+                ),
+              ),
+            ),
+          )
         ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: Icon(Icons.chat),
         backgroundColor: primaryColor,
+      ),
+    );
+  }
+
+  Widget myChatList() {
+    return Expanded(
+      child: ListView.builder(
+        itemCount: 10,
+        itemBuilder: (_, index) {
+          return SingleItemChatUserPage();
+        },
       ),
     );
   }

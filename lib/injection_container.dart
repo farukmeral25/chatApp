@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_chat_app/data/datasource/firebase_remote_datasource.dart';
 import 'package:flutter_chat_app/data/datasource/firebase_remote_datasource_impl.dart';
 import 'package:flutter_chat_app/data/repositories/firebase_repository_impl.dart';
+import 'package:flutter_chat_app/domain/repository/firebase_repository.dart';
 import 'package:flutter_chat_app/domain/usecases/get_create_current_user_usecase.dart';
 import 'package:flutter_chat_app/domain/usecases/get_current_uid_usecase.dart';
 import 'package:flutter_chat_app/domain/usecases/is_sign_in_usecase.dart';
@@ -36,20 +37,21 @@ Future<void> init() async {
   //useCase
 
   sl.registerLazySingleton<GetCreateCurrentUserUseCase>(
-      () => GetCreateCurrentUserUseCase(repository: sl.call()));
+          () => GetCreateCurrentUserUseCase(repository: sl.call()));
   sl.registerLazySingleton<GetCurrentUidUseCase>(
-      () => GetCurrentUidUseCase(repository: sl.call()));
+          () => GetCurrentUidUseCase(repository: sl.call()));
   sl.registerLazySingleton<IsSignInUseCase>(
-      () => IsSignInUseCase(repository: sl.call()));
+          () => IsSignInUseCase(repository: sl.call()));
   sl.registerLazySingleton<SignInWithPhoneNumberUseCase>(
-      () => SignInWithPhoneNumberUseCase(repository: sl.call()));
-  sl.registerLazySingleton<SignOutUseCase>(() => SignOutUseCase(sl.call()));
+          () => SignInWithPhoneNumberUseCase(repository: sl.call()));
+  sl.registerLazySingleton<SignOutUseCase>(
+          () => SignOutUseCase(repository: sl.call()));
   sl.registerLazySingleton<VerifyPhoneNumberUseCase>(
-      () => VerifyPhoneNumberUseCase(repository: sl.call()));
+          () => VerifyPhoneNumberUseCase(repository: sl.call()));
 
   //repository
 
-  sl.registerLazySingleton(
+  sl.registerLazySingleton<FirebaseRepository>(
     () => FirebaseRepositoryImpl(
       remoteDatasource: sl.call(),
     ),
